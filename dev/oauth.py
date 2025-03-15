@@ -1,11 +1,10 @@
 from datetime import datetime, timedelta
 
 import jwt
-from fastapi import Depends, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer
-
 from config import ALGORITHM, SECRET_KEY, pwd_context
 from db_init import redis_client, users_db
+from fastapi import Depends, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/login")
 

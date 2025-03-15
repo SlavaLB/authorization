@@ -1,9 +1,8 @@
 from datetime import timedelta
 
-from fastapi import APIRouter, Depends, Form, HTTPException, status
-
 from config import ACCESS_TOKEN_EXPIRE_MINUTES
 from db_init import redis_client, users_db
+from fastapi import APIRouter, Depends, Form, HTTPException, status
 from models import Role, Token, UserResponse
 from oauth import Oauth, oauth2_scheme
 
